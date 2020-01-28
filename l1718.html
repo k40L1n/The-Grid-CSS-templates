@@ -18,14 +18,20 @@
 
         .grid {
             display: grid;
-            grid-template: 100px 200px / 200px auto 300px;
+            /* grid-template: 100px 200px / 200px auto 300px; */
+
+            /* 3- Repeating Rows and Columns */
+            grid-template: 100px 100px / 100px 100px 100px;
+
+            /* 4- Instead of writing as shown above, one can simply write the short had version of it as shown below. This saves the time, and makes it more readable. Also if there were many such elements for eg, then it didn't make sense to write long declarations, but rather just write as  shown below */
+
+            grid-template: repeat(2, 100px) / repeat(3, 100px);
 
             /* 2- this is a way to define the areas and arrange the layouts */
             /* One has to use it however seperately now in those respective grid areas */
             /* For that we have to define the individual grid items with the respective alphabets or names chosen */
 
-            grid-template-areas:
-                "E E A"
+            grid-template-areas: "E E A"
                 "B C A"
                 "B D F"
         }
@@ -34,7 +40,7 @@
         /* syntax: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
         /* This syntax is literally hands down the most confusing in the GRID CSS and hence makes it very much not readable. */
 
-        .grid-item-1 {
+        /* .grid-item-1 {
             grid-area: A;
             background: crimson;
         }
@@ -62,7 +68,7 @@
         .grid-item-6 {
             grid-area: F;
             background: royalblue;
-        }
+        } */
     </style>
 </head>
 
