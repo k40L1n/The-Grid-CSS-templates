@@ -19,13 +19,49 @@
         .grid {
             display: grid;
             grid-template: 100px 200px / 200px auto 300px;
+
+            /* 2- this is a way to define the areas and arrange the layouts */
+            /* One has to use it however seperately now in those respective grid areas */
+            /* For that we have to define the individual grid items with the respective alphabets or names chosen */
+
+            grid-template-areas:
+                "E E A"
+                "B C A"
+                "B D F"
         }
 
         /* 1- Grid area is the shorthand for the grid-row-start/end and the grid-column-start/end */
         /* syntax: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+        /* This syntax is literally hands down the most confusing in the GRID CSS and hence makes it very much not readable. */
+
+        .grid-item-1 {
+            grid-area: A;
+            background: crimson;
+        }
 
         .grid-item-2 {
-            grid-area: 2 / 1 / 3 / 2;
+            grid-area: B;
+            background: yellow;
+        }
+
+        .grid-item-3 {
+            grid-area: C;
+            background: orange;
+        }
+
+        .grid-item-4 {
+            grid-area: D;
+            background: blue;
+        }
+
+        .grid-item-5 {
+            grid-area: E;
+            background: green;
+        }
+
+        .grid-item-6 {
+            grid-area: F;
+            background: royalblue;
         }
     </style>
 </head>
