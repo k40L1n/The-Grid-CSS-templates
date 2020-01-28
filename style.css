@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    background: #101010;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2 {
+    color: #00FF64;
+    letter-spacing: 2px;
+    font-weight: 300;
+}

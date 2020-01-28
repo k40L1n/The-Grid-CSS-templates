@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Display Grid</title>
+    <style>
+        .grid-item {
+            border: 1px solid white;
+            color: white;
+            font-size: 30px;
+            padding: 10px 15px;
+        }
+
+        .grid {
+            /* 1- flex aligns it horizontally */
+            /* display: flex; */
+
+            /* 2- grid aligns it vertically */
+            display: grid;
+
+            /* 3- Equi-distant colums can be simply assigned with 1fr (1 fraction) */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+
+            /* 4- The rows will auto adjust sometimes depending on the grid-template-columns props (as in above case) */
+
+            /* 5- We can give custom COLUMN size*/
+            /* grid-template-columns: 100px 200px 150px; */
+
+            /* 6- We can give custom ROW size */
+            /* grid-template-rows: 200px 400px; */
+
+            /* 7- If we use the keyword "auto", it fits automatically in the remaining area */
+            /* grid-template-rows: 100px 200px; */
+            /* grid-template-columns: 100px auto 200px; */
+
+            /* 8- The one line short hand property is also a possibility */
+            grid-template: 100px 200px / 200px auto 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>display:grid </h1>
+
+        <h2>These are the basics of the display: grid property. These define the COLUMN and ROW dimensions.</h2>
+
+        <div class="grid">
+            <div class="grid-item">Item 1</div>
+            <div class="grid-item">Item 2</div>
+            <div class="grid-item">Item 3</div>
+            <div class="grid-item">Item 4</div>
+            <div class="grid-item">Item 5</div>
+            <div class="grid-item">Item 6</div>
+        </div>
+    </div>
+</body>
+
+</html>
